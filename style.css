@@ -736,6 +736,7 @@ footer {
     .timeline-item {
         padding-left: 20px;
     }
+
     
     .job-header {
         flex-direction: column;
@@ -759,3 +760,14 @@ footer {
         padding: 20px;
     }
 }
+
+@media (max-width: 800px) {	
+    .timeline-marker.current{
+        left: -20px !important;
+        top: 0px;
+        }
+    
+        .timeline-marker{
+            left: -20px !important;
+        }
+    }

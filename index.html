@@ -41,7 +41,7 @@
                     <div class="profile-stats">
                         <div class="stat-card">
                             <div class="stat-icon">💼</div>
-                            <div class="stat-number">8+</div>
+                            <div class="stat-number" id="yearsExperience">8+</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-card">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="stat-card">
                             <div class="stat-icon">🏆</div>
-                            <div class="stat-number">9+</div>
+                            <div class="stat-number" id="certCount">9</div>
                             <div class="stat-label">Certifications</div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
             <!-- Work Experience -->
             <section class="section">
                 <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">8+ Years of OutSystems Excellence | Tech Lead | Full-Stack Development</p>
+                <p class="section-subtitle"><span id="yearsExperienceSubtitle">8+</span> Years of OutSystems Excellence | Tech Lead | Full-Stack Development</p>
                 
                 <div class="timeline">
                     <!-- Fujitsu Belgium -->
@@ -467,8 +467,29 @@
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Alberto A. Gomes. All rights reserved. Powered by Cursor.</p>
+            <p>&copy; <span id="currentYear">2025</span> Alberto A. Gomes. All rights reserved. Powered by Cursor.</p>
         </footer>
     </div>
+
+    <script>
+        // Calculate years of experience automatically
+        // Starting from December 2016 (your first professional role at Accenture)
+        const startDate = new Date('2016-12-01');
+        const currentDate = new Date();
+        const yearsExperience = Math.floor((currentDate - startDate) / (365.25 * 24 * 60 * 60 * 1000));
+        
+        // Update the experience count
+        document.getElementById('yearsExperience').textContent = yearsExperience + '+';
+        document.getElementById('yearsExperienceSubtitle').textContent = yearsExperience + '+';
+        
+        // Count certifications dynamically
+        const certCount = document.querySelectorAll('.cert-item').length;
+        document.getElementById('certCount').textContent = certCount;
+        
+        // Update copyright year
+        document.getElementById('currentYear').textContent = currentDate.getFullYear();
+        
+        console.log('CV loaded - ' + yearsExperience + '+ years of experience | ' + certCount + ' certifications');
+    </script>
 </body>
 </html>

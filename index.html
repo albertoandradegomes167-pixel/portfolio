@@ -67,7 +67,7 @@
                             <span class="profile-badge">Professional Summary</span>
                         </div>
                         <p class="profile-text">
-                            Experienced OutSystems Consultant and Tech Lead with a proven history of architecting and delivering high-performance, scalable low-code solutions across diverse industries. A true expert in the OutSystems ecosystem, combining deep technical knowledge with a sharp understanding of business strategy and client needs. Known for leading development teams to success through mentorship, collaboration, and a passion for innovation. Brings a creative, solution-oriented mindset to every project—transforming complex challenges into streamlined, impactful digital experiences that drive real business value.
+                            I'm an OutSystems Consultant and Tech Lead who's passionate about building smart, scalable solutions that make life easier for users and businesses alike. Over the years, I've delivered projects across industries including healthcare, banking, energy, and IT services, and had the opportunity to lead a talented development team, which helped me grow as a collaborator and mentor. I enjoy tackling challenging problems, finding practical ways to simplify them, and building digital solutions that genuinely help clients reach their goals. My goal is to turn complexity into simplicity.
                         </p>
                     </div>
                 </div>
@@ -274,33 +274,40 @@
                 <h2 class="section-title">Skills</h2>
                 
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3>Software Development</h3>
+                        <p class="skill-description">Expert in OutSystems, JavaScript, SQL Server, and full-stack development with 8+ years of experience.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
                         <h3>Problem Solving</h3>
+                        <p class="skill-description">I like breaking down complex technical problems and finding straightforward and simple solutions.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-handshake"></i></div>
                         <h3>Teamwork</h3>
+                        <p class="skill-description">Team player who puts the team first. Cooperation is the key to great development.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-users"></i></div>
                         <h3>Leadership</h3>
+                        <p class="skill-description">Tech Lead experience managing development teams and mentoring junior developers.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
                         <h3>Effective Communication</h3>
+                        <p class="skill-description">I'm always available to answer questions and help with any technical issues in a simple and clear way.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
                         <h3>Critical Thinking</h3>
+                        <p class="skill-description">I'm not afraid to think outside the box and come up with new ideas.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" onclick="toggleSkillDescription(this)">
                         <div class="skill-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                         <h3>Tutoring</h3>
+                        <p class="skill-description">I'm always happy to share my knowledge and help others grow.</p>
                     </div>
                 </div>
             </section>
@@ -486,6 +493,11 @@
         document.getElementById('currentYear').textContent = currentDate.getFullYear();
         
         console.log('CV loaded - ' + yearsExperience + '+ years of experience | ' + certCount + ' certifications');
+        
+        // Toggle skill description visibility
+        function toggleSkillDescription(skillCard) {
+            skillCard.classList.toggle('expanded');
+        }
     </script>
 </body>
 </html>

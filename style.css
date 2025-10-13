@@ -841,3 +841,20 @@ footer {
             left: -20px !important;
         }
     }
+
+/* Mobile-specific adjustments for skill cards */
+@media (max-width: 460px) {
+    .skill-card {
+        height: 240px; /* Increased height for mobile */
+    }
+    
+    .skill-description {
+        font-size: 0.85rem; /* Slightly smaller text for better fit */
+        line-height: 1.4;
+        width: calc(100% - 30px); /* More padding on mobile */
+    }
+    
+    .skill-card.expanded .skill-description {
+        max-height: 140px; /* More space for text on mobile */
+    }
+}

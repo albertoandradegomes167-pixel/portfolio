@@ -486,12 +486,13 @@ body {
     border: 2px solid var(--lighter-grey);
 }
 
-.skill-card:hover {
+
+/*.skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-color: var(--cust-yellow);
 }
-
+*/
 .skill-icon {
     font-size: 3rem;
     margin-bottom: 15px;
@@ -753,7 +754,23 @@ footer {
     }
     
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+    
+    .profile-box {
+        padding: 20px;
+    }
+    
+    .profile-badge {
+        font-size: 0.75rem;
+        padding: 6px 15px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+    
+    .profile-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
     
     footer {

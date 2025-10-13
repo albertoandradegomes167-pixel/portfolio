@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, var(--cust-grey) 0%, var(--dark-grey) 100%);
@@ -153,6 +157,11 @@ body {
     gap: 20px;
 }
 
+.stat-card-link {
+    text-decoration: none;
+    display: block;
+}
+
 .stat-card {
     background: linear-gradient(135deg, var(--cust-grey) 0%, var(--dark-grey) 100%);
     color: white;
@@ -161,6 +170,7 @@ body {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .stat-card:hover {
